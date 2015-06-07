@@ -1,10 +1,18 @@
 var path = require('path');
 
+var entry_path = path.resolve(path.join('src', 'components', 'app.jsx'));
+var dist_path = path.resolve('dist');
+var components_path = path.resolve(path.join('src', 'components'));
+
 var config = {
-  entry: path.resolve('./src/app.jsx'),
+  entry: entry_path,
   output: {
-    path: path.resolve('./dist'),
+    path: dist_path,
     filename: 'bundle.js'
+  },
+  resolve: {
+    root: components_path,
+    extensions: ['', '.js', '.jsx']
   },
   module: {
     loaders: [

@@ -1,5 +1,7 @@
 var React = require('react');
+var Home = require('Home');
+
 React.render(
-  <h1>Hello, world!</h1>,
+  <Home />,
   document.getElementById('app')
 );

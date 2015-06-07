@@ -4,8 +4,9 @@
   "description": "A personal website and blog",
   "main": "Gulpfile.js",
   "dependencies": {
-    "react-tools": "^0.13.3",
-    "react": "^0.13.3"
+    "react": "^0.13.3",
+    "react-document-title": "^1.0.2",
+    "react-tools": "^0.13.3"
   },
   "devDependencies": {
     "babel-core": "^5.5.4",
