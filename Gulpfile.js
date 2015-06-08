@@ -26,6 +26,7 @@ gulp.task('refresh', ['build'], browserSync.reload);
 
 gulp.task('serve', function() {
     browserSync.init({
+        notify: false,
         server: {
             baseDir: "./"
         }
