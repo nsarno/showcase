@@ -27,7 +27,7 @@ var NavbarMenu = React.createClass({
       <div className="collapse navbar-collapse" id="nav-menu">
         <ul className="nav navbar-nav navbar-right">
           <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ul>
       </div>
     );

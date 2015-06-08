@@ -1,6 +1,6 @@
 var path = require('path');
 
-var entry_path = path.resolve(path.join('src', 'components', 'app.jsx'));
+var entry_path = path.resolve(path.join('src', 'components', 'App.jsx'));
 var dist_path = path.resolve('dist');
 var components_path = path.resolve(path.join('src', 'components'));
 
