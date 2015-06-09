@@ -16,8 +16,8 @@ var config = {
   },
   module: {
     loaders: [
-      { test: /\.js$/, exclude: /node_modules/, loader: 'babel' },
-      { test: /\.jsx$/, exclude: /node_modules/, loader: 'babel' }
+      { test: /\.js$/, exclude: /node_modules/, loader: 'babel?optional[]=es7.objectRestSpread' },
+      { test: /\.jsx$/, exclude: /node_modules/, loader: 'babel?optional[]=es7.objectRestSpread' }
     ]
   }
 }

@@ -3,7 +3,7 @@ var React = require('react');
 var Form = React.createClass({
   render: function() {
     return (
-      <form>
+      <form onSubmit={this.props.handleSubmit}>
         {this.props.children}
       </form>
     );
@@ -14,8 +14,13 @@ Form.Input = React.createClass({
   render: function() {
     return (
       <div className="form-group">
-        <label for={this.props.id}>{this.props.label}</label>
-        <input type={this.props.type} className="form-control" id={this.props.id} placeholder={this.props.placeholder} />
+        <label htmlFor={this.props.id}>{this.props.label}</label>
+        <input  
+          className="form-control"
+          type={this.props.type}
+          id={this.props.id}
+          placeholder={this.props.placeholder}
+          onChange={this.props.handleChange}/>
       </div>
     );
   }
@@ -25,8 +30,13 @@ Form.Textarea = React.createClass({
   render: function() {
     return (
       <div className="form-group">
-        <label for={this.props.id}>{this.props.label}</label>
-        <textarea className="form-control" id={this.props.id} placeholder={this.props.placeholder} rows={this.props.rows}/>
+        <label htmlFor={this.props.id}>{this.props.label}</label>
+        <textarea
+          className="form-control"
+          id={this.props.id}
+          placeholder={this.props.placeholder}
+          rows={this.props.rows}
+          onChange={this.props.handleChange}/>
       </div>
     );
   }

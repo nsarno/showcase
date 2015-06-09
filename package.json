@@ -4,7 +4,7 @@
   "description": "A personal website and blog",
   "main": "Gulpfile.js",
   "dependencies": {
-    "mandrill-api": "^1.0.45",
+    "jquery": "^2.1.4",
     "react": "^0.13.3",
     "react-document-title": "^1.0.2",
     "react-router": "^0.13.3",
