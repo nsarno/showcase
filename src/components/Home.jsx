@@ -5,9 +5,10 @@ var Home = React.createClass({
   render: function() {
     return (
       <div className="container">
-        <DocumentTitle title='Home'>
-          <h1>Home</h1>
-        </DocumentTitle>
+        <DocumentTitle title='Home' />
+        <section>
+          <h1>Hello, world!</h1>
+        </section>
       </div>
     );
   }
