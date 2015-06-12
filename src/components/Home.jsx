@@ -4,10 +4,12 @@ var DocumentTitle = require('react-document-title');
 var Home = React.createClass({
   render: function() {
     return (
-      <div className="container">
+      <div id="home" className="container">
         <DocumentTitle title='Home' />
-        <section>
-          <h1>Hello, world!</h1>
+        <section className="row">
+          <div className="col-md-4 col-md-offset-4 col-centered vertical-center">
+            <h1>Hello, world!</h1>
+          </div>
         </section>
       </div>
     );

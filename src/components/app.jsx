@@ -12,8 +12,7 @@ var Contact = require('Contact');
 var App = React.createClass({
   render: function() {
     return (
-      <div>
-        <Navbar />
+      <div id="app">
         <RouteHandler/>
       </div>
     );
