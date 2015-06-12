@@ -1,19 +1,80 @@
-@import 'colors';
+@import 'utils';
+@import 'animations';
+
+$intro-color: $dark-gray;
+$backend-color: $rails-red;
+$frontend-color: $react-blue;
+$mobile-color: $swift-orange;
+$outro-color: $white;
+
+.navbar {
+  margin-bottom: 0px;
+}
 
 #home {
   width: 100%;
   height: 100%;
-  background-color: $primary-color;
+  margin: 0;
+  padding: 0;
 
   section {
+    width: 100%;
+    height: 100%;
+  }
 
-    .col-centered {
-      height: 100%;
-      text-align: center;
-    }
+  .next-section-link {
+    width: 100%;
+    position: absolute;
+    top: auto;
+    bottom: 15%;
+    left: 0;
+    right: 0;
+    text-align: center;
 
-    h1 {
+    font-size: 36px;
+
+    animation-name: hintDown;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+
+  #section-start {
+    // background-color: $intro-color;
+
+    .catch {
       width: 100%;
+      position: absolute;
+      top: 40%;
+      bottom: auto;
+      left: 0;
+      right: 0;
+
+      text-align: center;
+      color: $dark-gray;
+
+      h1 > strong {
+        color: $node-green;
+      }
     }
   }
+
+  #section-end {
+    position: relative;
+
+    .call-to-action {
+      width: 100%;
+      position: absolute;
+      top: 40%;
+      bottom: auto;
+      left: 0;
+      right: 0;
+      text-align: center;
+
+      a {
+        font-size: 24px;
+      }
+      
+    }
+  }
+
 }

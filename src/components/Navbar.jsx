@@ -5,9 +5,11 @@ var Navbar = React.createClass({
   render: function() {
     return (
       <DefaultNavbar>
-        <DefaultNavbar.Header brand="Home"/>
+        <DefaultNavbar.Header>
+          <i className="fa fa-diamond"></i>
+        </DefaultNavbar.Header>
         <DefaultNavbar.Menu>
-          <DefaultNavbar.Menu.Link value="Contact" href="/#/contact"/>
+          <li><a href="/#/contact"><i className="fa fa-envelope"></i></a></li>
         </DefaultNavbar.Menu>
       </DefaultNavbar>
     );

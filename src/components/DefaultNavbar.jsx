@@ -3,7 +3,7 @@ var React = require('react');
 var DefaultNavbar = React.createClass({
   render: function() {
     return (
-      <div className="navbar navbar-default">
+      <div className="navbar navbar-default navbar-fixed-top">
         <div className="container-fluid">
           {this.props.children}
         </div>
@@ -22,7 +22,9 @@ DefaultNavbar.Header = React.createClass({
           <span className="icon-bar"></span>
           <span className="icon-bar"></span>
         </button>
-        <a className="navbar-brand" href="#">{this.props.brand}</a>
+        <div className="navbar-brand navbar-brand-centered">
+          <a href="#">{this.props.children}</a>
+        </div>
       </div>
     );
   }
@@ -36,14 +38,6 @@ DefaultNavbar.Menu = React.createClass({
           {this.props.children}
         </ul>
       </div>
-    );
-  }
-});
-
-DefaultNavbar.Menu.Link = React.createClass({
-  render: function() {
-    return (
-      <li><a href={this.props.href}>{this.props.value}</a></li>
     );
   }
 });

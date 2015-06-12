@@ -13,6 +13,7 @@ var App = React.createClass({
   render: function() {
     return (
       <div id="app">
+        <Navbar />
         <RouteHandler/>
       </div>
     );

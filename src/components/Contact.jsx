@@ -21,9 +21,9 @@ var ContactForm = React.createClass({
 var Contact = React.createClass({
   getInitialState: function() {
     return {
-      name: "James Kilroy",
-      email: "james.kilroy@example.com",
-      message: "Hello, world!"
+      name: "",
+      email: "",
+      message: ""
     };
   },
 
@@ -67,7 +67,7 @@ var Contact = React.createClass({
 
   render: function() {
     return (
-      <div className="container">
+      <div id="contact" className="container">
         <DocumentTitle title='Contact'/>
         <h1>Contact</h1>
         <ContactForm handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>

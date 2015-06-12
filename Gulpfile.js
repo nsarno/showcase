@@ -18,17 +18,22 @@ var path = {
 
 gulp.task('scripts', function() {
   return gulp.src(path.scripts)
+    .pipe(plumber())
     .pipe(sourcemaps.init())
       .pipe(webpack(require(path.webpackConfig)))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(path.dist));
 });
 
+function sassError(e) {
+  sass.logError(e);
+  this.emit('end');
+}
+
 gulp.task('styles', function() {
   return gulp.src(path.styles)
-    .pipe(plumber())
     .pipe(sourcemaps.init())
-      .pipe(sass().on('error', sass.logError))
+      .pipe(sass().on('error', sassError))
     .pipe(sourcemaps.write('.'))
     .pipe(concat('bundle.css'))
     .pipe(gulp.dest(path.dist));

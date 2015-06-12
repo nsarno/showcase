@@ -1,14 +1,39 @@
 var React = require('react');
 var DocumentTitle = require('react-document-title');
+var $ = require('jquery');
 
-var Home = React.createClass({
+var NextSectionLink = React.createClass({
+
+  goToNextSection: function(e) {
+    $('html, body').animate({
+      scrollTop: $(this.props.section).offset().top
+    }, 500);
+  },
+
   render: function() {
     return (
-      <div id="home" className="container">
-        <DocumentTitle title='Home' />
-        <section className="row">
-          <div className="col-md-4 col-md-offset-4 col-centered vertical-center">
-            <h1>Hello, world!</h1>
+      <div className="next-section-link">
+        <a href="#" onClick={this.goToNextSection}><i className="fa fa-angle-double-down"></i></a>
+      </div>
+    );
+  }
+});
+
+var Home = React.createClass({
+
+  render: function() {
+    return (
+      <div id="home" className="container-fluid">
+        <DocumentTitle title="Home" />
+        <section id="section-start">
+          <div className="catch">
+            <h1>Need a <strong>developer</strong>?</h1>
+          </div>
+          <NextSectionLink section="#section-end"/>
+        </section>
+        <section id="section-end">
+          <div className="call-to-action">
+            <a href="/#/contact"><i className="fa fa-envelope"></i></a>
           </div>
         </section>
       </div>
