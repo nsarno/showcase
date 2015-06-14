@@ -74,7 +74,25 @@ $logo-color: $rails-red;
       margin-left: 20px;
       margin-right: 20px;
     }
+
     .thumbnail {
+      background-color: $dark-gray;
+      border: 0;
+      padding: 0 0;
+      p, h3 {
+        color: white;
+      }
+      
+    }
+
+    .weapon-card img {
+      border: 0;
+      display: block;
+      height: 250px;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
     }
   }
 

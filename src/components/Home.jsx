@@ -2,18 +2,32 @@ var React = require('react');
 var DocumentTitle = require('react-document-title');
 var $ = require('jquery');
 
-function toggleBrand() {
-  if ($('body').scrollTop() >= $('.logo').height() - $('.logo').offset().top) {
-    $('.navbar-brand').fadeIn();
-  } else {
-    $('.navbar-brand').fadeOut();
+var WeaponCard = React.createClass({
+  render: function() {
+    return (
+      <div className="weapon-card col-sm-6 col-md-4">
+        <div className="thumbnail">
+          <img style={{backgroundImage: 'url(' + this.props.imgSrc + ')'}} src="assets/blank.png"/>
+          <div className="caption">
+            <h3 id="thumbnail-label">{this.props.name}</h3>
+            <p>{this.props.children}</p>
+          </div>
+        </div>
+      </div>
+    );
   }
-}
+});
 
 var Home = React.createClass({
   componentDidMount: function() {
     $('.navbar-brand').hide();
-    $(window).scroll(toggleBrand);
+    $(window).scroll(function() {
+      if ($('body').scrollTop() >= $('.logo').height() - $('.logo').offset().top) {
+        $('.navbar-brand').fadeIn();
+      } else {
+        $('.navbar-brand').fadeOut();
+      }
+    });
   },
 
   componentWillUnmount: function() {
@@ -34,39 +48,23 @@ var Home = React.createClass({
         </header>
         <section id="stack">
           <div className="row">
-            <div className="col-sm-6 col-md-4">
-              <div className="thumbnail">
-                <img data-src="holder.js/100%x200" alt="100%x200" style={{height: '200px', width: '100%', display: 'block'}} src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDI0MiAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjkyLjQ1MzEyNSIgeT0iMTAwIiBzdHlsZT0iZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjExcHQ7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjQyeDIwMDwvdGV4dD48L2c+PC9zdmc+" data-holder-rendered="true" />
-                <div className="caption">
-                  <h3 id="thumbnail-label">Thumbnail label<a className="anchorjs-link" href="#thumbnail-label"><span className="anchorjs-icon"></span></a></h3>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                  <p><a href="#" className="btn btn-primary" role="button">Button</a> <a className="btn btn-default" role="button">Button</a></p>
-                </div>
-              </div>
-            </div>
+            <WeaponCard name="Rails" imgSrc="/assets/rails.jpg">
+              Rails is my favorite framework to build rock solid, state of the art restful api.
+              I love me some rails-api & CORS for a fully separated backend: mobile or web, one api to rule them all!
+              Seasoned with some JWT to make it perfectly stateless... et voilà!
+            </WeaponCard>
 
-            <div className="col-sm-6 col-md-4">
-              <div className="thumbnail">
-                <img data-src="holder.js/100%x200" alt="100%x200" style={{height: '200px', width: '100%', display: 'block'}} src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDI0MiAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjkyLjQ1MzEyNSIgeT0iMTAwIiBzdHlsZT0iZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjExcHQ7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjQyeDIwMDwvdGV4dD48L2c+PC9zdmc+" data-holder-rendered="true" />
-                <div className="caption">
-                  <h3 id="thumbnail-label">Thumbnail label<a className="anchorjs-link" href="#thumbnail-label"><span className="anchorjs-icon"></span></a></h3>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                  <p><a href="#" className="btn btn-primary" role="button">Button</a> <a className="btn btn-default" role="button">Button</a></p>
-                </div>
-              </div>
-            </div>
+            <WeaponCard name="React" imgSrc="/assets/react.png">
+              React recently became my weapon of choice to build a dynamic frontend web application.
+              Clean, powerful, flexible, highly reusable... those are not adjectives developer used to associate with their frontend codebase.
+              What used to be a nightmare just became a breeze thanks to the guys at Facebook & Instagram.
+            </WeaponCard>
 
-            <div className="col-sm-6 col-md-4">
-              <div className="thumbnail">
-                <img data-src="holder.js/100%x200" alt="100%x200" style={{height: '200px', width: '100%', display: 'block'}} src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDI0MiAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjkyLjQ1MzEyNSIgeT0iMTAwIiBzdHlsZT0iZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjExcHQ7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjQyeDIwMDwvdGV4dD48L2c+PC9zdmc+" data-holder-rendered="true" />
-                <div className="caption">
-                  <h3 id="thumbnail-label">Thumbnail label<a className="anchorjs-link" href="#thumbnail-label"><span className="anchorjs-icon"></span></a></h3>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                  <p><a href="#" className="btn btn-primary" role="button">Button</a> <a className="btn btn-default" role="button">Button</a></p>
-                </div>
-              </div>
-            </div>
-
+            <WeaponCard name="iOS" imgSrc="/assets/ios.jpg">
+              I'm a mobile developer first. From iOS 4.0 to what it is now and from Objective-C to Swift, I grew up as a developer with
+              an iPhone in my hand and Xcode on my screen.
+            </WeaponCard>
+            
           </div>
         </section>
         <section id="section-3">
