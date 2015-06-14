@@ -69,7 +69,6 @@ var Contact = React.createClass({
     return (
       <div id="contact" className="container">
         <DocumentTitle title='Contact'/>
-        <h1>Contact</h1>
         <ContactForm handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>
       </div>
     );

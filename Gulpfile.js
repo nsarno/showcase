@@ -7,7 +7,6 @@ var webpack = require('gulp-webpack');
 var browserSync = require('browser-sync');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
-var plumber = require('gulp-plumber');
 
 var path = {
   scripts: ['src/**/*.js', 'src/**/*.jsx'],
@@ -18,7 +17,6 @@ var path = {
 
 gulp.task('scripts', function() {
   return gulp.src(path.scripts)
-    .pipe(plumber())
     .pipe(sourcemaps.init())
       .pipe(webpack(require(path.webpackConfig)))
     .pipe(sourcemaps.write('.'))

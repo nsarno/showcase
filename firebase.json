@@ -1,0 +1,9 @@
+{
+  "firebase": "robocorp",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

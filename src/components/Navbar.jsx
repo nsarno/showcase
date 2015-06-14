@@ -1,17 +1,20 @@
 var React = require('react');
-var DefaultNavbar = require('DefaultNavbar');
 
 var Navbar = React.createClass({
   render: function() {
     return (
-      <DefaultNavbar>
-        <DefaultNavbar.Header>
-          <i className="fa fa-diamond"></i>
-        </DefaultNavbar.Header>
-        <DefaultNavbar.Menu>
-          <li><a href="/#/contact"><i className="fa fa-envelope"></i></a></li>
-        </DefaultNavbar.Menu>
-      </DefaultNavbar>
+      <nav className="navbar navbar-fixed-top">
+        <div className="container-fluid">
+            <div className="navbar-header pull-left">
+              <div className="navbar-brand navbar-brand-centered">
+                <a href="#"><i className="fa fa-diamond"></i></a>
+              </div>
+            </div>
+            <ul className="nav navbar-nav navbar-right pull-right">
+              <li><a href="/#/contact"><i className="fa fa-envelope-o"></i></a></li>
+            </ul>
+        </div>
+      </nav>
     );
   }
 });

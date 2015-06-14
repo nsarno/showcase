@@ -10,22 +10,42 @@ html, body, #app {
   font-weight: 400;
 }
 
-@media screen and (min-width:768px) {
-    .navbar-brand-centered {
-        position: absolute;
-        left: 50%;
-        display: block;
-        width: 160px;
-        text-align: center;
-    }
-    .navbar > .container .navbar-brand-centered, 
-    .navbar > .container-fluid .navbar-brand-centered {
-        margin-left: -80px;
-    }
-}
-
 h1 {
   font-family: $font-stack;
   font-weight: 700;
   font-size: 56px;
+}
+
+.nav > li > a:focus,
+.nav > li > a:hover {
+  color: $rails-red;
+  background-color: transparent;
+}
+
+.navbar {
+  margin: 25px 25px;
+  font-size: 24px;
+
+  a {
+    color: $silver;
+  }
+
+  .navbar-brand a {
+    color: $rails-red;
+    font-size: 32px;
+  }
+}
+
+
+.navbar-brand-centered {
+    position: absolute;
+    left: 50%;
+    display: block;
+    width: 160px;
+    text-align: center;
+}
+
+.navbar > .container .navbar-brand-centered, 
+.navbar > .container-fluid .navbar-brand-centered {
+    margin-left: -80px;
 }
