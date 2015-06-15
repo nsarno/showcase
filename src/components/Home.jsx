@@ -47,15 +47,17 @@ var Home = React.createClass({
           </h1>
         </header>
         <section id="stack">
+          <h2></h2>
           <div className="row">
             <WeaponCard name="Rails" imgSrc="/assets/rails.jpg">
               Rails is my favorite framework to build rock solid, state of the art restful api.
-              I love me some rails-api & CORS for a fully separated backend: mobile or web, one api to rule them all!
+              I love me some rails-api & CORS for
+              a fully isolated and lightweight backend, consumed indifferently by mobile or web apps.
               Seasoned with some JWT to make it perfectly stateless... et voilà!
             </WeaponCard>
 
             <WeaponCard name="React" imgSrc="/assets/react.png">
-              React recently became my weapon of choice to build a dynamic frontend web application.
+              React recently became my weapon of choice to build dynamic web applications.
               Clean, powerful, flexible, highly reusable... those are not adjectives developer used to associate with their frontend codebase.
               What used to be a nightmare just became a breeze thanks to the guys at Facebook & Instagram.
             </WeaponCard>
@@ -64,7 +66,6 @@ var Home = React.createClass({
               I'm a mobile developer first. From iOS 4.0 to what it is now and from Objective-C to Swift, I grew up as a developer with
               an iPhone in my hand and Xcode on my screen.
             </WeaponCard>
-            
           </div>
         </section>
         <section id="section-3">
