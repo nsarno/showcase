@@ -14,8 +14,11 @@ $logo-color: $dark-gray;
   margin-top: $navbar-offset;
   padding: 0;
 
-  #header {
+  header {
+    position: relative;
     text-align: center;
+    height: 100%;
+    width: 100%;
   }
 
   #header .logo {
@@ -63,10 +66,10 @@ $logo-color: $dark-gray;
     }
   }
 
-  section, header {
+  section {
     position: relative;
     width: 100%;
-    height: 100%;
+    margin-top: 125px;
 
     h2 {
       width: 100%;
@@ -122,7 +125,7 @@ $logo-color: $dark-gray;
     p {
       font-family: $font-stack-alt;
       width: 100%;
-      font-size: 36px;
+      font-size: 32px;
       font-weight: 200;
       margin-bottom: 40px;
     }

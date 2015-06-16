@@ -10,7 +10,7 @@ var Card = React.createClass({
           <img style={{backgroundImage: 'url(' + this.props.imgSrc + ')'}} src="assets/blank.png"/>
           <div className="caption">
             <h3 id="thumbnail-label">{this.props.name}</h3>
-            {this.props.children}
+            <p>{this.props.children}</p>
           </div>
         </div>
       </div>
@@ -50,55 +50,35 @@ var Home = React.createClass({
           <h2><i className="fa fa-cubes"></i> Tech Stack</h2>
           <div className="row">
             <Card name="Rails" imgSrc="/assets/rails.jpg">
-              <p>
-                Rails is my favorite framework to build rock solid, state of the art restful api.
-                I love me some rails-api & CORS for
-                a fully isolated and lightweight backend, consumed indifferently by mobile or web apps.
-                Seasoned with some JWT to make it perfectly stateless... et voilà!
-              </p>
+              Rails is my favorite framework to build rock solid, state of the art restful api.
+              I love me some rails-api & CORS for
+              a fully isolated and lightweight backend, consumed indifferently by mobile or web apps.
+              Seasoned with some JWT to make it perfectly stateless... et voilà!
             </Card>
 
             <Card name="React" imgSrc="/assets/react.png">
-              <p>
-                React recently became my weapon of choice to build dynamic web applications.
-                Clean, powerful, flexible, highly reusable... those are not adjectives developer used to associate with their frontend codebase.
-                What used to be a nightmare just became a breeze thanks to the guys at Facebook & Instagram.
-              </p>
+              React recently became my weapon of choice to build dynamic web applications.
+              Clean, powerful, flexible, highly reusable... those are not adjectives developer used to associate with their frontend codebase.
+              What used to be a nightmare just became a breeze thanks to the guys at Facebook & Instagram.
             </Card>
 
             <Card name="iOS" imgSrc="/assets/ios.jpg">
-              <p>
-                I'm a mobile developer first. From iOS 4.0 to what it is now and from Objective-C to Swift, I grew up as a developer with
-                an iPhone in my hand and Xcode on my screen.
-              </p>
+              I'm a mobile developer first. From iOS 4.0 to what it is now and from Objective-C to Swift, I grew up as a developer with
+              an iPhone in my hand and Xcode on my screen.
             </Card>
           </div>
         </section>
         <section id="xp">
           <div className="row">
-            <h2><i className="fa fa-coffee"></i> Experience</h2>
+            <h2>I <i className="fa fa-heart-o"></i> teamwork</h2>
             <Card name="Appsfire" imgSrc="/assets/appsfire.png">
-              <ul>
-                <li>Integrated Appsfire SDK in frameworks like Titanium, Phonegap, Unity</li>
-                <li>Built demo applications to showcase Appsfire SDK</li>
-                <li>Created original animations for the Appsfire app</li>
-              </ul>
+              iOS developer
             </Card>
             <Card name="Quanta" imgSrc="/assets/quanta.png">
-              <ul>
-                <li>Built from scratch Quanta Monitoring, a performance intelligence application</li>
-                <li>Created and maintained a data intensive Rails API</li>
-                <li>Managed and optimized ever growing databases (billions+ of rows) on a daily basis</li>
-                <li>Built a complex single page application with AngularJS</li>
-                <li>Created scripts to aggregate data from various sources like Google Analytics, Zabbix, Magento.</li>
-              </ul>
+              Lead engineer
             </Card>
             <Card name="Epitech" imgSrc="/assets/epitech.png">
-              <ul>
-                <li>C programing language teacher</li>
-                <li>Unix system teacher</li>
-                <li>Web development teacher</li>
-              </ul>
+              C programming & System unix teacher
             </Card>
           </div>
         </section>
@@ -121,10 +101,8 @@ var Home = React.createClass({
           </div>
         </section>
         <section id="contact-me">
-          <p>
-            Am I a great fit for your team?
-          </p>
-          <a className="btn btn-default btn-primary">contact me</a>
+          <p>Want to talk about your project?</p>
+          <a href="/#/contact" className="btn btn-default btn-primary">contact me</a>
         </section>
         <footer>
           <div className="social">
