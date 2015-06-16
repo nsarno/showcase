@@ -5,7 +5,7 @@ $backend-color: $rails-red;
 $frontend-color: $react-blue;
 $mobile-color: $swift-orange;
 $outro-color: $white;
-$logo-color: $rails-red;
+$logo-color: $dark-gray;
 
 #home {
   width: 100%;
@@ -71,7 +71,11 @@ $logo-color: $rails-red;
     h2 {
       width: 100%;
       text-align: center;
+      text-transform: uppercase;
       margin-bottom: 50px;
+      color: $dark-gray;
+      font-family: $font-stack-alt;
+      font-size: 24px;
     }
   }
 
@@ -85,8 +89,13 @@ $logo-color: $rails-red;
       background-color: $dark-gray;
       border: 0;
       padding: 0 0;
+
       p, h3 {
         color: white;
+      }
+
+      ul li {
+        list-style-type: square;
       }
 
       ul li, p {
@@ -106,43 +115,60 @@ $logo-color: $rails-red;
     }
   }
 
-  // section, header {
-  //   position: relative;
-  //   width: 100%;
-  //   height: 100%;
+  #contact-me {
+    text-align: center;
+    height: 50%;
 
-  //   .headline {
-  //     width: 100%;
-  //     position: absolute;
-  //     top: 40%;
-  //     bottom: auto;
-  //     left: 0;
-  //     right: 0;
+    p {
+      font-family: $font-stack-alt;
+      width: 100%;
+      font-size: 36px;
+      font-weight: 200;
+      margin-bottom: 40px;
+    }
+    
+    a {
+      border-radius: 30px;
+      padding: 15px 60px;
+      font-size: 18px;
+      background-color: $rails-red;
+      border: none;
+      text-transform: uppercase;
 
-  //     text-align: center;
-  //     color: $dark-gray;
+      &:hover {
+        background-color: $dark-gray;
+      }
+    }
+  }
 
-  //     h1 b {
-  //       color: $node-green;
-  //     }
-  //   }
-  // }
+  footer {
+    .social {
+      width: 100%;
+      text-align: center;
 
+      a {
+        font-size: 40px;
+        display: inline-block;
+        margin: 10px 20px;
+        color: $light-gray;
+        cursor: pointer;
 
-  // #section-end {
-  //   .call-to-action {
-  //     width: 100%;
-  //     position: absolute;
-  //     top: 40%;
-  //     bottom: auto;
-  //     left: 0;
-  //     right: 0;
-  //     text-align: center;
+        &:hover {
+          color: $dark-gray;
+        }
+      }
+    }
 
-  //     a {
-  //       font-size: 24px;
-  //     }      
-  //   }
-  // }
+    p {
+      width: 100%;
+      font-size: 12px;
+      text-align: center;
+      font-weight: 700;
+      color: $dark-gray;
+      text-transform: uppercase;
+      margin-top: 20px;
+      margin-bottom: 75px;
+    }
+  }
 
 }

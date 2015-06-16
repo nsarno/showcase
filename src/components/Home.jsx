@@ -43,11 +43,11 @@ var Home = React.createClass({
           <h1>
             <span className="name">Arnaud Mesureur</span>
             <span className="location">Paris, France</span>
-            <span className="tagline">Full stack developer, passionate hacker & 🍕 slayer</span>
+            <span className="tagline">Full stack developer & passionate hacker</span>
           </h1>
         </header>
         <section id="stack">
-          <h2><i className="fa fa-laptop"></i> Tech Stack</h2>
+          <h2><i className="fa fa-cubes"></i> Tech Stack</h2>
           <div className="row">
             <Card name="Rails" imgSrc="/assets/rails.jpg">
               <p>
@@ -76,10 +76,10 @@ var Home = React.createClass({
         </section>
         <section id="xp">
           <div className="row">
-            <h2><i className="fa fa-graduation-cap"></i> Experience</h2>
+            <h2><i className="fa fa-coffee"></i> Experience</h2>
             <Card name="Appsfire" imgSrc="/assets/appsfire.png">
               <ul>
-                <li>Integrated the SDK in frameworks like Titanium, Phonegap, Unity</li>
+                <li>Integrated Appsfire SDK in frameworks like Titanium, Phonegap, Unity</li>
                 <li>Built demo applications to showcase Appsfire SDK</li>
                 <li>Created original animations for the Appsfire app</li>
               </ul>
@@ -104,7 +104,11 @@ var Home = React.createClass({
         </section>
         <section id="achievements">
           <div className="row">
-            <h2><i className="fa fa-star"></i> Achievements</h2>
+            <h2>
+              <i className="fa fa-star-o"></i>
+              <i className="fa fa-star-o"></i>
+              <i className="fa fa-star-o"></i> Achievements
+            </h2>
             <Card name="Epitech" imgSrc="/assets/epitech.png">
               <p>Master in Computer Science</p>
             </Card>
@@ -116,6 +120,20 @@ var Home = React.createClass({
             </Card>
           </div>
         </section>
+        <section id="contact-me">
+          <p>
+            Am I a great fit for your team?
+          </p>
+          <a className="btn btn-default btn-primary">contact me</a>
+        </section>
+        <footer>
+          <div className="social">
+            <a href="https://github.com/nsarno"><i className="fa fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/arnaudmesureur"><i className="fa fa-linkedin"></i></a>
+            <a href="https://angel.co/nsarno"><i className="fa fa-angellist"></i></a>
+          </div>
+          <p>Arnaud Mesureur © 2015</p>
+        </footer>
       </div>
     );
   }
