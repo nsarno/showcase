@@ -45,7 +45,7 @@ Form.Textarea = React.createClass({
 Form.Submit = React.createClass({
   render: function() {
     return (
-      <button type="submit" className="btn btn-default">{this.props.value}</button>
+      <button type="submit" className="btn btn-default submit"><i className="fa fa-paper-plane-o"></i></button>
     );
   }
 });

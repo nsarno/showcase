@@ -34,6 +34,10 @@ h1 {
   .navbar-brand a {
     color: $silver;
     font-size: 32px;
+
+    &:hover {
+      color: $alizarin;
+    }
   }
 }
 

@@ -9,10 +9,10 @@ var ContactForm = React.createClass({
     var { handleSubmit, ...other } = this.props;
     return (
       <Form handleSubmit={handleSubmit}>
-        <Form.Input {...other} id="name" label="Name" type="text" placeholder="Your name" />
-        <Form.Input {...other} id="email" label="Email address" type="email" placeholder="Your email address" />
-        <Form.Textarea {...other} id="message" label="Message" placeholder="Hi ..." rows="10" />
-        <Form.Submit value="Send"/>
+        <Form.Input {...other} id="name" label="What's your name?" type="text" placeholder="John Doe" />
+        <Form.Input {...other} id="email" label="What's your email address?" type="email" placeholder="john.doe@example.net" />
+        <Form.Textarea {...other} id="message" label="Please leave your message." placeholder="Hi ..." rows="10" />
+        <Form.Submit />
       </Form>
     );
   }
