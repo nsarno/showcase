@@ -2,15 +2,15 @@ var React = require('react');
 var DocumentTitle = require('react-document-title');
 var $ = require('jquery');
 
-var WeaponCard = React.createClass({
+var Card = React.createClass({
   render: function() {
     return (
-      <div className="weapon-card col-sm-6 col-md-4">
+      <div className="card col-sm-6 col-md-4">
         <div className="thumbnail">
           <img style={{backgroundImage: 'url(' + this.props.imgSrc + ')'}} src="assets/blank.png"/>
           <div className="caption">
             <h3 id="thumbnail-label">{this.props.name}</h3>
-            <p>{this.props.children}</p>
+            {this.props.children}
           </div>
         </div>
       </div>
@@ -37,7 +37,7 @@ var Home = React.createClass({
   render: function() {
     return (
       <div id="home" className="container-fluid">
-        <DocumentTitle title="Home" />
+        <DocumentTitle title="Arnaud Mesureur" />
         <header id="header">
           <div className="logo"><i className="fa fa-diamond"></i></div>
           <h1>
@@ -47,28 +47,74 @@ var Home = React.createClass({
           </h1>
         </header>
         <section id="stack">
-          <h2></h2>
+          <h2><i className="fa fa-laptop"></i> Tech Stack</h2>
           <div className="row">
-            <WeaponCard name="Rails" imgSrc="/assets/rails.jpg">
-              Rails is my favorite framework to build rock solid, state of the art restful api.
-              I love me some rails-api & CORS for
-              a fully isolated and lightweight backend, consumed indifferently by mobile or web apps.
-              Seasoned with some JWT to make it perfectly stateless... et voilà!
-            </WeaponCard>
+            <Card name="Rails" imgSrc="/assets/rails.jpg">
+              <p>
+                Rails is my favorite framework to build rock solid, state of the art restful api.
+                I love me some rails-api & CORS for
+                a fully isolated and lightweight backend, consumed indifferently by mobile or web apps.
+                Seasoned with some JWT to make it perfectly stateless... et voilà!
+              </p>
+            </Card>
 
-            <WeaponCard name="React" imgSrc="/assets/react.png">
-              React recently became my weapon of choice to build dynamic web applications.
-              Clean, powerful, flexible, highly reusable... those are not adjectives developer used to associate with their frontend codebase.
-              What used to be a nightmare just became a breeze thanks to the guys at Facebook & Instagram.
-            </WeaponCard>
+            <Card name="React" imgSrc="/assets/react.png">
+              <p>
+                React recently became my weapon of choice to build dynamic web applications.
+                Clean, powerful, flexible, highly reusable... those are not adjectives developer used to associate with their frontend codebase.
+                What used to be a nightmare just became a breeze thanks to the guys at Facebook & Instagram.
+              </p>
+            </Card>
 
-            <WeaponCard name="iOS" imgSrc="/assets/ios.jpg">
-              I'm a mobile developer first. From iOS 4.0 to what it is now and from Objective-C to Swift, I grew up as a developer with
-              an iPhone in my hand and Xcode on my screen.
-            </WeaponCard>
+            <Card name="iOS" imgSrc="/assets/ios.jpg">
+              <p>
+                I'm a mobile developer first. From iOS 4.0 to what it is now and from Objective-C to Swift, I grew up as a developer with
+                an iPhone in my hand and Xcode on my screen.
+              </p>
+            </Card>
           </div>
         </section>
-        <section id="section-3">
+        <section id="xp">
+          <div className="row">
+            <h2><i className="fa fa-graduation-cap"></i> Experience</h2>
+            <Card name="Appsfire" imgSrc="/assets/appsfire.png">
+              <ul>
+                <li>Integrated the SDK in frameworks like Titanium, Phonegap, Unity</li>
+                <li>Built demo applications to showcase Appsfire SDK</li>
+                <li>Created original animations for the Appsfire app</li>
+              </ul>
+            </Card>
+            <Card name="Quanta" imgSrc="/assets/quanta.png">
+              <ul>
+                <li>Built from scratch Quanta Monitoring, a performance intelligence application</li>
+                <li>Created and maintained a data intensive Rails API</li>
+                <li>Managed and optimized ever growing databases (billions+ of rows) on a daily basis</li>
+                <li>Built a complex single page application with AngularJS</li>
+                <li>Created scripts to aggregate data from various sources like Google Analytics, Zabbix, Magento.</li>
+              </ul>
+            </Card>
+            <Card name="Epitech" imgSrc="/assets/epitech.png">
+              <ul>
+                <li>C programing language teacher</li>
+                <li>Unix system teacher</li>
+                <li>Web development teacher</li>
+              </ul>
+            </Card>
+          </div>
+        </section>
+        <section id="achievements">
+          <div className="row">
+            <h2><i className="fa fa-star"></i> Achievements</h2>
+            <Card name="Epitech" imgSrc="/assets/epitech.png">
+              <p>Master in Computer Science</p>
+            </Card>
+            <Card name="StartupBus" imgSrc="/assets/startupbus.png">
+              <p>Finalist at StartupBus Europe 2014</p>
+            </Card>
+            <Card name="CSULB" imgSrc="/assets/csulb.png">
+              <p>American Language Institute Certificate</p>
+            </Card>
+          </div>
         </section>
       </div>
     );
