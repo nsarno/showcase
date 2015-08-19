@@ -1,2 +1,2 @@
 # showcase
-My corporate showcase website
+Personal showcase website
